@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="shortcut icon" href="../img/gdg-logo-tab-trans.png" sizes="20x20">
+  <title>Hackathon</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/mdb.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/animate.css" rel="stylesheet">
+    
+    <style type="text/css">
+        .first-button1{
+            height: 30px;
+            padding: 6px;
+            margin: 0;
+            margin-top: 5px;
+            margin-left: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+
+.animated-icon2{
+width: 25px;
+height: 20px;
+position: relative;
+margin: 0px;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.animated-icon2 span{
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+        
+.animated-icon2 span {
+background: #fff;
+}
+
+
+.animated-icon2 span:nth-child(1) {
+top: 0px;
+}
+
+.animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
+top: 8px;
+}
+
+.animated-icon2 span:nth-child(4) {
+top: 16px;
+}
+
+.animated-icon2.open span:nth-child(1) {
+top: 11px;
+width: 0%;
+left: 50%;
+}
+
+.animated-icon2.open span:nth-child(2) {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+.animated-icon2.open span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+
+.animated-icon2.open span:nth-child(4) {
+top: 11px;
+width: 0%;
+left: 50%;
+}
+        
+  
+        
+    .container1{
+  height: 350px;
+  overflow: hidden;
+  margin: 90px auto;
+  background-color: #212121;
+        
+}
+
+.var-highlight{
+	color: #4AC4D5;
+}
+.string-highlight{
+	color: #fff;
+}
+
+.purple{
+	color: #AB7FB9;
+}
+
+.deep-yellow{
+	color: #BA9433;
+}
+
+.green{
+	color: #9CCC65;
+}
+
+#typewriter{
+		font-size: 0.8em;
+		margin: 0;
+		font-family: 'Roboto Mono', monospace;
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}    
+        
+                
+    </style>
+
+</head>
+
+<body>
+
+<div class="fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark primary-color bg-dark ">
+
+  <a class="navbar-brand" href="../index.html" style="font-weight: 400;"><img src="../img/gdg-logo-trans.png" height="20px"> GDG Siliguri</a>
+
+      <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+  </button>
+
+  <div class="collapse navbar-collapse" id="basicExampleNav" style="font-size: 14px;">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="#">Speakers</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="../pages/hackathon.html">Hackathon</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Schedule</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="../pages/community-guidelines.html">Community Guidelines</a>
+      </li>
+        
+      <li class="nav-item">
+          <button type="button" class="btn first-button1" style="color: white; border: 1px solid white;">Apply for a Pass</button>
+      </li>
+                
+    </ul>
+  </div>
+</nav>
+    </div>
+    
+    
+    
+    <div style="background-color: #383838; color: white;">
+        <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="row">
+            <div class="col-md-7" style="margin-top: 20px;">
+                #codeFest19
+                <br>
+                <h1><span style="color: #BB86FC">CodeFest</span> is here!</h1>
+                <br>            
+                <p>The hackathon is meant for the community. GDG Siliguri is a relatively new community in this ecosystem. As a part of this initiative, we are putting up a hackathon for the participants to <b>build for the community</b>. You will be asked to build modules or tools that will be beneficial or used by the community.</p>
+                
+                
+                
+                <p>These may include but not limited to,<br>
+                -Design ideas and implementation of the community web-sites and application(s)<br>
+                -Building API(s) for communication from application to various messaging platforms like Discord<br>
+                -Chat-bot for quick queries<br>
+                -Platform for publishing blogs / articles / news<br>
+                -Platform for quick broadcasting of upcoming events / announcements<br>
+                -App development for the community<br>
+                -Platform for pitching raw ideas</p>
+
+            
+            </div>          
+            
+            <div class="col-md-5">
+                
+                
+                
+                
+                
+                <div class="container" style="overflow: hidden;">
+                       <div class="container1" style="overflow: hidden;">
+
+
+<pre id="typewriter" style="overflow: hidden;">
+
+
+   <span class="var-highlight">class</span><span class="purple"> MyModel</span><span class="string-highlight">(tf.keras.</span><span class="purple">Model</span><span class="string-highlight">):</span>
+      <span class="var-highlight">def </span> <span class="string-highlight">_ _init_ _(</span><span class="var-highlight">self</span><span class="string-highlight">):</span>
+        <span class="var-highlight">super</span><span class="string-highlight">(</span><span class="purple">MyModel</span> <span class="string-highlight">,</span> <span class="var-highlight">self</span><span class="string-highlight" >)._ _init_ _()</span>,
+        <span class="var-highlight">self</span><span class="string-highlight">.conv1 =</span><span class="purple">  Conv2D</span><span class="string-highlight">(</span><span class="deep-yellow">32, 3</span><span class="string-highlight">, activation=</span><span class="green">'relu'</span><span class="string-highlight">)</span>
+        <span class="var-highlight">self</span><span class="string-highlight">.flatten =</span> <span class="purple">Flatten</span><span class="string-highlight">()</span>,
+        <span class="var-highlight">self</span><span class="string-highlight">.d1 = </span><span class="purple">Dense</span><span class="string-highlight">(</span><span class="deep-yellow">128</span><span class="string-highlight">, activation=</span><span class="green">'relu'</span><span class="string-highlight">)</span>
+        <span class="var-highlight">self</span><span class="string-highlight">.d2 = </span><span class="purple">Dense</span><span class="string-highlight">(</span><span class="deep-yellow">10</span><span class="string-highlight">, activation=</span><span class="green">'softmax'</span><span class="string-highlight">)</span>
+
+    <span class="var-highlight">def</span><span class="string-highlight"> call(</span><span class="var-highlight">self</span><span class="string-highlight">, x):</span>
+        <span class="string-highlight">x = </span><span class="var-highlight">self</span><span class="string-highlight">.conv1(x)</span>
+        <span class="string-highlight">x = </span><span class="var-highlight">self</span><span class="string-highlight">.flatten(x)</span>
+        <span class="string-highlight">x = </span><span class="var-highlight">self</span><span class="string-highlight">.d1(x)</span>
+        <span class="var-highlight"> return self</span><span class="string-highlight">.d2(x)</span>
+    <span class="string-highlight">model =</span><span class="purple"> MyModel</span><span class="string-highlight">()</span>
+</pre>
+
+
+
+
+        </div>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+        </div>
+        </div>     
+    </div>
+    
+    
+        <div style="background-color: #cd8cff; color: black;">
+        <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+                    <div class="row">
+            <div class="col-md-7" style="">      
+                    
+                <h1>Stages</h1>
+
+                <h4>Stage 1: Team selection and shortlisting</h4>
+
+                <p>We can accommodate a maximum of 20 teams for the hackathon. Thus, to participate in the hackathon, we will have a small technical coding session where we will ask you to work on a problem which will be quite simple. Based on your approach, the organising team will decide the top 80 participants. The teams will be randomly selected.</p>
+
+                <br>
+                <h4>Stage 2: Hackathon day -- Yayy!!!</h4> 
+
+                The launch arena has been set, The spark will be ignited by the judging panel to launch the hackathon. You will be working with your team of 4 team-mates, from morning till evening. At the end of the hackathon, we will push all of the code-base to GDG Siliguri’s github page. The winners will get amazing prizes. 
+                
+                <br>
+                <br>
+                <p><b>Make sure each team has at-least 1 laptop</b></p> 
+                
+            </div>               
+            </div>
+        </div>
+    </div>
+    
+    
+    
+            <div style="background-color: #fff; color: black;">
+        <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+                    <div class="row">
+            <div class="col-md-7" style="">      
+                    
+                <h1>Prizes and Perks</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Nunc vitae lorem dui. Nulla eros ante, laoreet et erat ut,<br> consectetur vulputate magna.<br>  Maecenas ut lacus lacus. Sed sed purus vel ligula interdum feugiat.<br>  Aliquam tristique, odio eu ultrices</p> 
+                <p>maximus, turpis turpis porttitor neque, at venenatis ligula nisl et nunc. Fusce id tortor in metus pretium porta. Etiam id dolor dui. Ut feugiat metus ut dapibus viverra. In iaculis urna velit, ac sollicitudin ligula molestie blandit. Quisque nec dui nibh. Vestibulum eu orci vel tortor tristique faucibus sit amet tristique massa. Aliquam non est in orci laoreet auctor.</p>
+                
+            </div>               
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+<!-- Footer -->
+<footer class="page-footer font-small" style="background-color: #212121;">
+
+
+  <div class="footer-copyright py-3">
+    
+      <div class="container" style="color: white;">
+  <div class="row">
+    <div class="col-md-4"><div style="font-weight: 400; margin-left: 20px; margin-top: 10px; margin-bottom: 20px;"><img src="../img/gdg-logo-trans.png" height="30px"></div></div>
+      <div class="col-md-4" style="margin-top: 14px;">	&copy; Copyright 2019  |  <b>GDG Siliguri</b></div>
+    <div class="col-md-4" style="margin-top: 14px;">Created with<i class="fas fa-coffee" style="margin-left: 6px; margin-right: 7px;"></i>and <i class="fas fa-heart" style="margin-left: 5px; margin-right: 5px;"></i> by GDG Siliguri Team</div>
+  </div>
+</div>
+      
+      
+      
+      
+  
+  </div>
+
+</footer>
+<!-- Footer -->    
+    
+    
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+    
+    <script>
+    $(document).ready(function () {
+
+  $('.second-button').on('click', function () {
+
+    $('.animated-icon2').toggleClass('open');
+  });
+});
+    </script>
+    
+    
+    
+    <script type="text/javascript">
+
+
+  function setupTypewriter(t) {
+  	    var HTML = t.innerHTML;
+
+  	    t.innerHTML = "";
+
+  	    var cursorPosition = 0,
+  	        tag = "",
+  	        writingTag = false,
+  	        tagOpen = false,
+  	        typeSpeed = 100,
+          tempTypeSpeed = 0;
+
+  	    var type = function() {
+
+  	        if (writingTag === true) {
+  	            tag += HTML[cursorPosition];
+  	        }
+
+  	        if (HTML[cursorPosition] === "<") {
+  	            tempTypeSpeed = 0;
+  	            if (tagOpen) {
+  	                tagOpen = false;
+  	                writingTag = true;
+  	            } else {
+  	                tag = "";
+  	                tagOpen = true;
+  	                writingTag = true;
+  	                tag += HTML[cursorPosition];
+  	            }
+  	        }
+  	        if (!writingTag && tagOpen) {
+  	            tag.innerHTML += HTML[cursorPosition];
+  	        }
+  	        if (!writingTag && !tagOpen) {
+  	            if (HTML[cursorPosition] === " ") {
+  	                tempTypeSpeed = 0;
+  	            }
+  	            else {
+  	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+  	            }
+  	            t.innerHTML += HTML[cursorPosition];
+  	        }
+  	        if (writingTag === true && HTML[cursorPosition] === ">") {
+  	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+  	            writingTag = false;
+  	            if (tagOpen) {
+  	                var newSpan = document.createElement("span");
+  	                t.appendChild(newSpan);
+  	                newSpan.innerHTML = tag;
+  	                tag = newSpan.firstChild;
+  	            }
+  	        }
+
+  	        cursorPosition += 1;
+  	        if (cursorPosition < HTML.length - 1) {
+  	            setTimeout(type, tempTypeSpeed);
+  	        }
+
+  	    };
+
+  	    return {
+  	        type: type
+  	    };
+  	}
+
+  	var typer = document.getElementById('typewriter');
+
+  	typewriter = setupTypewriter(typewriter);
+
+  	typewriter.type();
+
+
+
+</script>
+    
+    
+    
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
