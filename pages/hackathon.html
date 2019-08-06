@@ -159,6 +159,51 @@ left: 50%;
 	100%{opacity: 1;}
 }    
         
+        
+        .game {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(../img/game/cloud.png) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.mole {
+  background: url(../img/game/mole.png) center center no-repeat;
+  background-size: 55%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+        
+        
+        
+        
                 
     </style>
 
@@ -330,6 +375,39 @@ left: 50%;
                 
                         </div>
                         
+                        
+                <div class="col-md-5">
+                        <div class="container" style="padding-bottom: 50px;">
+                              <div class="game" style="height: 350px; background-color: #fce6ff; border-left: 3px solid #cb32e3;; padding-bottom: 10px;">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+                            
+                            <button type="button" class="btn btn-dark" onClick="startGame()">Start!</button>
+                             <b>Score: <span class="score">0</span></b>
+                                
+                            
+                            
+                            
+                            </div>
+                 </div>
+
             </div>
         </div>
     </div>
@@ -454,6 +532,52 @@ left: 50%;
 
 
 
+</script>
+    
+    
+    
+    <script>
+  const holes = document.querySelectorAll('.hole');
+  const scoreBoard = document.querySelector('.score');
+  const moles = document.querySelectorAll('.mole');
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+  function randomHole(holes) {
+    const idx = Math.floor(Math.random() * holes.length);
+    const hole = holes[idx];
+    if (hole === lastHole) {
+      return randomHole(holes);
+    }
+    lastHole = hole;
+    return hole;
+  }
+  function peep() {
+    const time = randomTime(900, 1000);
+    const hole = randomHole(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) peep();
+    }, time);
+  }
+  function startGame() {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    peep();
+    setTimeout(() => timeUp = true, 10000)
+  }
+  function bonk(e) {
+    if(!e.isTrusted) return; // cheater!
+    score++;
+    this.parentNode.classList.remove('up');
+    scoreBoard.textContent = score;
+  }
+  moles.forEach(mole => mole.addEventListener('click', bonk));
 </script>
     
     
